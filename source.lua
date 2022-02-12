@@ -100,6 +100,7 @@ function MessageBoxT.Show(option)
     local Addup = 0
 
     if (game.CoreGui:FindFirstChild("Notifications")) then 
+	GUI = game.CoreGui:FindFirstChild("Notifications")
     else 
         GUI = Instance.new("ScreenGui", game.CoreGui)
         GUI.Name = "Notifications"
