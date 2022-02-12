@@ -87,7 +87,6 @@ local function ApplyDrag(Component, MainWindow)
 end
 
 function MessageBoxT.Show(option)
-    game.CoreGui["Notifications"]:Destroy()
     option = typeof(option) == "table" and option or {}
     local MessageDescription = tostring(option.Description) and option.Description or "This is an Notification"
     local Options = tostring(option.MessageBoxButtons) and option.MessageBoxButtons or "OK"
