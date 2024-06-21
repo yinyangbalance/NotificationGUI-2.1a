@@ -147,7 +147,9 @@ function MessageBoxT.Show(option)
     end
 
     MessageBox.Size = UDim2.new(0, MessageBox["MessageDescription"].TextBounds.X + 100,0, MessageBox["MessageDescription"].TextBounds.Y + 70 + Addup)
-    
+    local sound = Instance.new("Sound", MessageBox)
+    sound.SoundId = "rbxassetid://5914602124"
+    sound:Play()
     if Buttons ~= nil then
         for i,v in pairs(Buttons:GetChildren()) do
             if v:IsA("TextButton") then
